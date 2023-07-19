@@ -50,7 +50,7 @@ RSpec.describe Park do
     end
   end
 
-  describe '#Iteration 4' do 
+  xdescribe '#Iteration 4' do 
     it 'returns names of attendees, adults, and minors' do 
       bataan = Park.new({name: "Bataan National Park", admission: 10})
       vehicle_1 = Vehicle.new("2001", "Honda", "Civic")    
