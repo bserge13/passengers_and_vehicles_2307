@@ -10,7 +10,7 @@ RSpec.describe Passenger do
     expect(taylor).to be_a(Passenger)
   end
 
-  describe '#iteration 1' do 
+  describe '#Iteration 1' do 
     it 'has readable attributes' do 
       charlie = Passenger.new({"name" => "Charlie", "age" => 18}) 
       taylor = Passenger.new({"name" => "Taylor", "age" => 12}) 
