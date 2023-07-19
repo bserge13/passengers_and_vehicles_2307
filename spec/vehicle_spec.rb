@@ -9,7 +9,7 @@ RSpec.describe Vehicle do
   end
 
   describe '#Iteration 2' do
-    it 'is has reradable attributes' do
+    it 'has reradable attributes' do
       vehicle = Vehicle.new("2001", "Honda", "Civic")    
 
       expect(vehicle.year).to eq("2001")
