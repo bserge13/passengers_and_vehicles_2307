@@ -28,4 +28,29 @@ class Park
   def revenue
     passengers * @admission_price
   end
+
+  def all_attendees
+    names_of_passengers = []
+    @vehicles.each do |vehicle|
+      names_of_passengers << vehicle.passengers
+    end
+    names_of_passengers.select do |passenger|
+      # require 'pry'; binding.pry
+      passenger
+    end
+    # names = []
+    # names_of_passengers.each do |passenger|
+    #   require 'pry'; binding.pry
+    #   names << passenger.name
+    # end
+    # names 
+  end
+
+  def minors
+
+  end
+
+  def adults
+
+  end
 end

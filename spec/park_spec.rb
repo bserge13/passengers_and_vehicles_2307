@@ -49,4 +49,26 @@ RSpec.describe Park do
       expect(bataan.revenue).to eq(30)
     end
   end
+
+  describe '#Iteration 4' do 
+    it 'returns names of attendees, adults, and minors' do 
+      bataan = Park.new({name: "Bataan National Park", admission: 10})
+      vehicle_1 = Vehicle.new("2001", "Honda", "Civic")    
+      vehicle_2 = Vehicle.new("2018", "Ford", "Mustang")  
+      charlie = Passenger.new({"name" => "Charlie", "age" => 18})
+      jude = Passenger.new({"name" => "Jude", "age" => 20})    
+      taylor = Passenger.new({"name" => "Taylor", "age" => 12}) 
+
+      vehicle_1.add_passenger(charlie)
+      vehicle_1.add_passenger(jude)
+      vehicle_2.add_passenger(taylor)
+
+      bataan.add_vehicle(vehicle_1)
+      bataan.add_vehicle(vehicle_2)
+
+      expect(bataan.all_attendees).to eq(["Charlie", "Jude", "Taylor"])
+      # expect(bataan.minors).to eq(["Taylor"])
+      # expect(bataan.adults).to eq(["Charlie", "Jude"])
+    end
+  end
 end
